@@ -1,0 +1,451 @@
+<style>
+
+.bones001-night {
+    --border: 1px solid #333;
+    --background-1: #111;
+    --background-2: #222;
+    --accent: #6d5f93;
+    --color-icon: #555;
+    --color: #555;
+    --gradient: linear-gradient(45deg, var(--accent), #555);
+}
+.bones001-cred {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 10px!important;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #aaa;
+}
+.bones001-day{
+  --border:1px solid #eee;
+  --background-1:#fafafa;
+  --background-2:#f7f7f7;
+  --color-icon:#ddd;
+  --color:#777;
+  --gradient:linear-gradient(45deg, var(--accent), #555);
+}
+.bones001 br{
+  display:none;
+}
+.bones001{
+  color:var(--color);
+  width:370px;
+  height:580px;
+  font-family:'Montserrat';
+  margin:10px auto;
+  background:#f3f3f3;
+  display:flex;
+  align-items:center;
+  position:relative;
+  z-index:1;
+  justify-content:center;
+  background-image:url('https://via.placeholder.com/390x580');
+  border-radius:10px;
+}
+.bones001-tel{
+  width:300px;
+  height:510px;
+  border:var(--border);
+  background:var(--background-1);
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:5px 5px 10px #4441;
+}
+.bones001-contenido{
+  background:#4 44;
+  height:100%;
+  position:relative;
+}
+.bones001-botones{
+  background:var(--background-2);
+  width:100%;
+  box-sizing:border-box;
+  height:45px;
+  position:absolute;
+  bottom:0;
+  border-top:var(--border);
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+  padding:0 20px;
+  z-index:2;
+}
+.bones001-botones > input[type="radio"] {
+  display: none;
+}
+.bones001-iperfil{
+  width:30px;
+  height:30px;
+  border:var(--border);
+  background:var(--background-1);
+  border-radius:100%;
+  border-width:2px;
+  padding:2px;
+}
+.bones001-botones i{
+  font-size:1.2rem;
+  color:var(--color-icon);
+}
+.bones001-botones label {cursor:pointer;}
+[id^="bones001t-"]:checked + label i{
+  color: var(--accent);
+}
+[id^="bones001t-"]:checked + label div{
+  border-color: var(--accent);
+}
+.bones001-iperfil img{
+  width:30px;
+  height:30px;
+  border-radius:100%;
+}
+.bones001-app-top{
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+}
+.bones001-app-top > b{
+  font-family:'Montserrat';
+  font-weight:520;
+  color:var(--accent);
+  font-size:.8rem;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+.bones001-app-top > span{
+  display:flex;
+  gap:15px;
+  font-size:1rem;
+  color:var(--color-icon);
+}
+.bones001-app-stories{
+  display:flex;
+  padding:0 0 25px;
+  align-items:center;
+  justify-content:space-between;
+}
+.b001-app-storie{
+  width:60px;
+  height:60px;
+  background:var(--gradient);
+  border-radius:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  outline:3px solid var(--background-1);
+  outline-offset:-6px;
+}
+.b001-app-storie img{
+  width:48px;
+  height:48px;
+  border-radius:100%;
+}
+.b001-app-usersto{
+  font-size:.62rem;
+  text-align:center;
+  display:block;
+  padding-top:2px;
+  font-family:'poppins';
+  font-weight:500;
+  padding-top:5px;
+  font-style:italic;
+}
+.bones001-app-feed{ 
+  height:425px;
+  padding:10px 10px 0;
+  box-sizing:border-box;
+  overflow:auto;
+}
+.b001-app-photo{
+  margin-bottom:25px;
+}
+.b001-app-p-top{
+  position:relative;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  flex-direction:column;
+  padding-left:42px;
+  line-height:11px;
+  font-family:'Montserrat';
+}
+.b001-app-p-top > img{
+  width:30px;height:30px;
+  position:absolute;
+  left:0;
+  border-radius:100%;
+  border:var(--border);
+}
+.b001-app-p-top > a{
+  font-size:.8rem;
+  color:var(--accent);
+  font-weight:540;
+}
+.b001-app-p-top > span{
+  font-size:.65rem;
+}
+.b001-app-p-img{
+  padding:15px 0;
+}
+.b001-app-p-img img{
+  width:265px;
+  margin:0 auto;
+  display:block;
+  border-radius:5px;
+}
+.b001-a-p-b{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:var(--color-icon);
+  padding-bottom:5px;
+}
+.b001-a-p-b > span{
+  display:flex;
+  gap:10px;
+}
+.b001-a-p-descript{
+  display:flex;
+  padding-top:5px;
+  flex-direction:column;
+  font-family:'Montserrat';
+  gap:2px;
+} 
+.b001-a-p-descript strong{
+  font-size:.7rem;
+}
+.b001-a-p-descript > strong > span{
+  color:var(--accent);
+}
+.b001-a-p-descript > span{
+  font-size:.75rem;
+  line-height:14px;
+}
+.b001-a-p-descript > span:last-child{
+  font-size:.6rem;
+  color:var(--color-sec);
+}
+.bones001 *::-webkit-scrollbar {
+    width: 5px;
+  background:var(--background-1);
+  border-left:var(--border);
+}
+
+.bones001 *::-webkit-scrollbar-thumb {
+    background: var(--accent);
+  border-radius:5px;
+}
+.bones001-account .bones001-app-top > b{
+  text-transform:initial;
+  font-size:1rem;
+}
+.b001-app-ac {
+    padding: 0 6px 0 10px;
+    overflow: auto;
+    height: 424px;
+}
+.b001-info{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 5px;
+  padding-bottom:15px;
+}
+.b001-info-img-perfil{
+  width:80px;
+  height:80px;
+  background:var(--gradient);
+  border:var(--border);
+  border-radius:100%;
+  outline:2px solid var(--background-1);
+  outline-offset:-6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.b001-ac-img > img {
+    width: 92px;
+    height: 92px;
+}
+.b001-info-img-perfil > img{
+  width:70px;
+  height:70px;
+  border-radius:100%;
+  display:block;
+}
+.b001-info > span > span{
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  align-items:center;
+  justify-content:center,
+}
+.b001-info > span > span > b{
+  color:var(--accent);
+  font-size:.95rem;
+  font-weight:800;
+}
+.b001-info > span > span > span{
+  font-size:.62rem;
+}
+.b001-info > span{
+  display:flex;
+  gap:20px;
+}
+.b001-info-pj{
+  display:flex;
+  flex-direction:column;
+  padding:0 10px;
+}
+.b001-info-pj > a{
+  font-size:.84rem;
+}
+.b001-info-pj > span{
+  font-size:.7rem;
+  color:var(--accent);
+  letter-spacing:.5px;
+}
+.b001-info-pj > span:last-child{
+  color:var(--color);
+  font-size:.75rem;
+  letter-spacing:0;
+  padding-top:4px;
+}
+.b001-bot{
+  margin-top:20px;
+  display:grid;
+  grid-template-columns: repeat(3,93px);
+}
+.b001-bot > i{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 0;
+  font-size:1.1rem;
+  color:var(--color-icon);
+}
+.b001-bot > i:first-child{
+  color:var(--accent);
+  border-bottom:2px solid var(--accent);
+}
+.b001-ac-feed {
+    width: 280px;
+    display: grid;
+    min-height: 100px;
+    grid-template-columns: repeat(3,92px);
+    gap: 2px;
+    margin: 2px auto;
+}
+.b001-ac-img{
+  background:#ddd;
+  height:92px;
+}
+.b-p-t-s{
+  margin:5px;
+  background:var(--background-2);
+  width:100%;
+  border-radius:6px;
+  border:var(--border);
+  font-size:.7rem;
+  padding:10px 12px;
+}
+.bones001-search .bones001-app-top{
+  padding:13px 8px;
+  height:auto;
+}
+.b-p-t-s > i{
+  color:var(--accent);
+  padding-right:10px;
+}
+.b001-s-feed {
+    height: 420px;
+    overflow: hidden;
+    padding: 0 3px;
+}
+.b001-s-f-m {
+    display: grid;
+    gap: 2px;
+    margin: 2px 7px;
+}
+.b001-s-f-m-d{
+  grid-template-columns: auto 92px;
+}
+.b001-s-f-m-i{
+  grid-template-columns: 92px auto;
+}
+.b001-s-f-m > span {
+    display: grid;
+    grid-template-columns: repeat(2,92px);
+    gap: 2px;
+}
+.b001-s-f-m > span > img{
+  width:92px;
+  height:92px;
+}
+.b001-s-f-m > img{
+  width:92px;
+  height:186px;
+}
+.bones001-modulo {
+  position: absolute;
+  transition: 0.1s all;
+  display:none;
+  top:-465px;
+  left:0;
+  z-index:-1;
+}
+#bones001t-home:checked ~ .bones001-home,
+#bones001t-search:checked ~ .bones001-search,
+#bones001t-imgperfil:checked ~ .bones001-account{
+  display:block;
+}
+.bones001:before {
+    border-radius: 10px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--accent);
+    opacity: .2;
+    z-index: -1;
+}
+.b001-ac-img-fijado:after {
+    font-weight: 800;
+    content: "\f08d";
+    font-family: "Font Awesome 5 Free";
+    color: #fff;
+    font-size: 12px;
+    z-index: 2;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transform: rotate(45deg);
+}
+.b001-ac-img-fijado {
+    position: relative;
+}
+.bones001:after {
+    backdrop-filter: grayscale(1) contrast(.3);
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+    border-radius: 10px;
+}
+.bones001-modulo {
+    width: 102%;
+    overflow-x:hidden;
+}
+.bones001-search.bones001-modulo {
+    width: 300px;
+}
+
+</style>
